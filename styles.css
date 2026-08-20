@@ -1,0 +1,336 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --text-color: black;
+    --primary: #007bff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: lightblue;
+}
+
+/* =========================
+   NAVBAR SECTION
+========================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 60px;
+    background-color:  #CDD6D0
+}
+
+/* Logo */
+nav .left a {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Right container */
+nav .right {
+    display: flex;
+    align-items: center; 
+    gap: 12px;
+}
+
+/* Icon buttons */
+nav .right a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    color: var(--text-color);
+
+    transition: all 0.2s ease;
+}
+
+/* Icons */
+nav .right a i {
+    font-size: 18px;
+}
+
+/* Hide text on mobile */
+nav .right a span {
+    display: none;
+}
+
+/* Hover effect */
+nav .right a:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    transform: scale(1.05);
+}
+
+nav .right a:active {
+    transform: scale(0.95);
+}
+
+nav .left a,
+nav .right a {
+    text-decoration: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #CDD6D0;
+}
+
+/* =========================
+   TABLET (>= 600px)
+========================= */
+@media (min-width: 600px) {
+    nav {
+        padding: 0 30px;
+        height: 70px;
+    }
+
+    nav .left a {
+        font-size: 22px;
+    }
+
+    nav .right a {
+        width: auto;
+        height: auto;
+        padding: 6px 10px;
+        border-radius: 6px;
+        gap: 6px;
+    }
+
+    nav .right a span {
+        display: inline;
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   DESKTOP (>= 900px)
+========================= */
+@media (min-width: 900px) {
+    nav {
+        padding: 0 50px;
+        height: 80px;
+    }
+
+    nav .left a {
+        font-size: 24px;
+    }
+
+    nav .right a span {
+        font-size: 16px;
+    }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.hero-section img {
+    width: 200px;
+    border-radius: 50%;
+    margin-right: 150px;
+}
+
+.hero-section .links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.hero-section .links a:hover {
+    color: #6f42c1 !important;
+    text-decoration: underline;
+}
+
+.hero-section .links a:visited {
+    color: #007bff;
+}
+
+/* =========================
+   GENERAL SECTION
+========================= */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* =========================
+   ABOUT BUTTONS
+========================= */
+.about-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 6px;
+    background: var(--primary);
+    color: white;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn.secondary {
+    background: var(--primary);
+}
+
+.btn:hover.secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn.outline {
+    background: var(--primary);
+    color: white;
+}
+
+.btn:hover.outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+
+/* =========================
+   SKILLS SECTION
+========================= */
+.skills-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.skill-card {
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.skill-card i {
+    font-size: 28px;
+    color: var(--primary);
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+.project-grid {
+    display: grid;
+    gap: 20px;
+    
+}
+
+.project-card {
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    border: black 1px solid;
+    margin-top: 20px;
+
+}
+
+.project-card a {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: small;
+    text-align: left;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+
+}
+
+/* =========================
+   DESKTOP SECTION
+========================= */
+@media (min-width: 900px) {
+
+    /* navbar */
+    nav {
+        padding: 0 50px;
+        height: 80px;
+    }
+
+    nav .right span {
+        display: inline;
+    }
+
+    /* hero layout */
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 0 50px;
+    }
+
+    .hero-section .text {
+        flex: 1.2;
+    }
+
+    .hero-section .image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hero-section img {
+        width: 300px;
+    }
+
+    /* skills */
+    .skills-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    /* projects */
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* buttons */
+    .about-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
