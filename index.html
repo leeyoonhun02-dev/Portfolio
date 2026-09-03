@@ -1,151 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
-    <title>Gelo Dev Portfolio</title>
-</head>
-<body>
+    <meta
+      name="description"
+      content="Portfolio of John Angelo Bitana, a junior full-stack web developer and Full Stack Web Development bootcamp graduate."
+    />
 
-    <!-- NAVBAR -->
+    <title>John Angelo Bitana | Junior Full-Stack Developer</title>
+  </head>
+  <body>
     <nav>
-        <div class="left">
-            <a href="#">Home</a>
-        </div>
+      <div class="left">
+        <a href="#">Home</a>
+      </div>
 
-        <div class="right">
-            <a href="https://gitlab.com/uplift-code-camp/students/batch-29/john-angelo-bitana" target="_blank">
-                <i class="fa-brands fa-gitlab"></i>
-                <span>GitLab</span>
-            </a>
+      <div class="right">
+        <a
+          href="https://gitlab.com/uplift-code-camp/students/batch-29/john-angelo-bitana"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open my GitLab profile"
+        >
+          <i class="fa-brands fa-gitlab"></i>
+          <span>GitLab</span>
+        </a>
 
-            <a href="https://www.linkedin.com/in/john-angelo-bitana-143379175/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
+        <a
+          href="https://www.linkedin.com/in/john-angelo-bitana-143379175/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open my LinkedIn profile"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
 
-            <a href="mailto:leeyoonhun02@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Email</span>
-            </a>
-        </div>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=leeyoonhun02@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Compose an email to me"
+        >
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email</span>
+        </a>
+      </div>
     </nav>
 
-    <!-- MAIN -->
     <main>
+      <section class="hero-section">
+        <div class="text">
+          <p class="eyebrow">FULL-STACK WEB DEVELOPMENT BOOTCAMP GRADUATE</p>
+          <h1>Hi, I'm John Angelo Bitana</h1>
+          <p>
+            I build clean, responsive web experiences with HTML, CSS,
+            JavaScript, React, and Node.js, with foundational knowledge of
+            MongoDB. I am looking for a junior developer opportunity where I can
+            contribute, learn quickly, and grow with a team.
+          </p>
 
-        <!-- HERO -->
-        <section class="hero-section">
-            <div class="text">
-                <h2>Hi, I'm John Angelo Bitana</h2>
-                <p>
-                    I'm a passionate software developer with a knack for creating innovative solutions.
-                    With experience in multiple fields of work, I bring a unique perspective to my projects.
-                </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn">View my projects</a>
+            <a href="files/Resume_EN.pdf" download class="btn secondary"
+              >Download resume</a
+            >
+          </div>
 
-                <div class="links">
-                    <a href="#about">About</a>
-                    <span>|</span>
-                    <a href="#skills">Skills</a>
-                    <span>|</span>
-                    <a href="#projects">Projects</a>
-                    <span>|</span>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
+          <div class="links">
+            <a href="#about">About</a>
+            <span>|</span>
+            <a href="#skills">Skills</a>
+            <span>|</span>
+            <a href="#projects">Projects</a>
+            <span>|</span>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
 
-            <div class="image">
-                <img src="images/headshot.jpg" alt="My photo">
-            </div>
-        </section>
-   
-        
+        <div class="image">
+          <img src="images/headshot.jpg" alt="My photo" />
+        </div>
+      </section>
 
-        <!-- ABOUT -->
-        <section id="about" class="section">
-            <h2>About Me</h2>
+      <section id="about" class="section">
+        <p class="section-label">PROFILE</p>
+        <h2>Ready to keep learning and contributing</h2>
 
+        <p>
+          I recently completed a Full Stack Web Development bootcamp and enjoy
+          turning ideas into clear, user-friendly interfaces. My background
+          across different fields helps me approach problems with patience,
+          curiosity, and a focus on the people using the product.
+        </p>
+
+        <div class="about-buttons">
+          <a href="files/Resume_EN.pdf" download class="btn">
+            <i class="fa-solid fa-download"></i> Resume
+          </a>
+
+          <a
+            href="files/Japanese Resume_John Angelo.pdf"
+            download
+            class="btn secondary"
+          >
+            <i class="fa-solid fa-download"></i> Resume (JP)
+          </a>
+
+          <a href="files/N1.jpg" class="btn outline">
+            <i class="fa-solid fa-certificate"></i> JLPT
+          </a>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <p class="section-label">TECH STACK</p>
+        <h2>Tools I use to build for the web</h2>
+        <p>Tools I have practiced through coursework and personal projects:</p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-js"></i><span>JavaScript</span>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-html5"></i><span>HTML</span>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-github"></i><span>GitHub</span>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-gitlab"></i><span>GitLab</span>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-mobile-screen-button"></i
+            ><span>Responsive Design</span>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-node-js"></i><span>Node.js</span>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-react"></i><span>React</span>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-database"></i><span>MongoDB</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <p class="section-label">SELECTED WORK</p>
+        <h2>Projects that show how I learn</h2>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <h3>Coffee Dispenser</h3>
             <p>
-                I’m a web developer who enjoys building clean, responsive, and user-friendly websites.</p>
-                <p>I’m constantly learning and improving my skills.</p>
+              A JavaScript console app that simulates a coffee dispenser,
+              including user choices, inventory, and transaction logic.
+            </p>
+            <p class="project-stack">JavaScript · Console application</p>
+            <a
+              href="https://gitlab.com/uplift-code-camp/students/batch-29/john-angelo-bitana/projects/-/tree/main/p1-js-console-app?ref_type=heads"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn outline"
+            >
+              <i class="fa-solid fa-code"></i> View repo
+            </a>
+          </div>
 
-            <div class="about-buttons">
-                <a href="files/Resume_EN.pdf" download class="btn">
-                    <i class="fa-solid fa-download"></i> Resume
-                </a>
-
-                <a href="files/Japanese Resume_John Angelo.pdf" class="btn secondary">
-                    <i class="fa-solid fa-download"></i> Resume (JP)
-                </a>
-
-                <a href="files/N1.jpg" class="btn outline">
-                    <i class="fa-solid fa-certificate"></i> JLPT
-                </a>
+          <div class="project-card">
+            <h3>Budget Buddy</h3>
+            <p>
+              A full-stack budgeting application that helps users organize and
+              manage their personal finances through a responsive interface.
+            </p>
+            <p class="project-stack">React · JavaScript · Node.js · MongoDB</p>
+            <div class="project-links">
+              <a
+                href="https://github.com/leeyoonhun02-dev/Budget-Buddy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn outline"
+              >
+                <i class="fa-brands fa-github"></i> View code
+              </a>
+              <a
+                href="https://budget-buddy-three-lemon.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-link"
+              >
+                Live site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- SKILLS -->
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <p>Technologies and tools I use:</p>
-
-            <div class="skills-grid">
-                <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
-                <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-                <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
-                <div class="skill-card"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Coffee Dispenser</h3>
-                    <p>A JavaScript console app that simulates a coffee dispenser.</p>
-                    <a href="https://gitlab.com/uplift-code-camp/students/batch-29/john-angelo-bitana/projects/-/tree/main/p1-js-console-app?ref_type=heads" target="_blank" class="btn outline">
-                        <i class="fa-solid fa-code"></i> View repo
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Coming Soon</h3>
-                    <p> More projects will be added soon. Stay tuned! </p>
-                </div>
-
-                <div class="project-card">
-                    <h3>Coming Soon</h3>
-                    <p>More projects will be added soon. Stay tuned!</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <p>Fill out the form and I’ll get back to you.</p>
-<br>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="text" placeholder="Subject">
-                <textarea rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-
+      <section id="contact" class="section">
+        <p class="section-label">LET'S CONNECT</p>
+        <h2>Have an opportunity in mind?</h2>
+        <p>
+          I’m open to junior developer roles, internships, and conversations
+          with teams building useful products.
+        </p>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=leeyoonhun02@gmail.com&su=Portfolio%20opportunity"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn contact-button"
+        >
+          <i class="fa-solid fa-envelope"></i> Email me
+        </a>
+      </section>
     </main>
-</body>
+  </body>
 </html>
