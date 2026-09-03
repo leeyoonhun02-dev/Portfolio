@@ -31,13 +31,13 @@
 
       <div class="right">
         <a
-          href="https://gitlab.com/uplift-code-camp/students/batch-29/john-angelo-bitana"
+          href="https://github.com/leeyoonhun02-dev"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Open my GitLab profile"
+          aria-label="Open my GitHub profile"
         >
-          <i class="fa-brands fa-gitlab"></i>
-          <span>GitLab</span>
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
         </a>
 
         <a
@@ -173,7 +173,7 @@
             </p>
             <p class="project-stack">JavaScript · Console application</p>
             <a
-              href="https://gitlab.com/uplift-code-camp/students/batch-29/john-angelo-bitana/projects/-/tree/main/p1-js-console-app?ref_type=heads"
+              href="https://github.com/leeyoonhun02-dev/Coffee-Dispenser.git"
               target="_blank"
               rel="noopener noreferrer"
               class="btn outline"
@@ -257,5 +257,50 @@
         </a>
       </section>
     </main>
+
+    <script>
+      const sectionLinks = document.querySelectorAll(".hero-section .links a");
+      let highlightTimeout;
+
+      sectionLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const section = document.querySelector(link.getAttribute("href"));
+
+          if (!section) return;
+
+          event.preventDefault();
+          clearTimeout(highlightTimeout);
+
+          document
+            .querySelectorAll(".section.is-highlighted, .links a.is-active")
+            .forEach((element) =>
+              element.classList.remove("is-highlighted", "is-active"),
+            );
+
+          section.classList.add("is-highlighted");
+          link.classList.add("is-active");
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+
+          highlightTimeout = setTimeout(() => {
+            section.classList.remove("is-highlighted");
+            link.classList.remove("is-active");
+          }, 1800);
+        });
+      });
+
+      window.addEventListener(
+        "load",
+        () => {
+          if (window.location.hash) {
+            history.replaceState(
+              null,
+              "",
+              window.location.pathname + window.location.search,
+            );
+          }
+        },
+        { once: true },
+      );
+    </script>
   </body>
 </html>
