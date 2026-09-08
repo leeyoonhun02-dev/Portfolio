@@ -77,6 +77,18 @@ nav .right a {
   transition: all 0.2s ease;
 }
 
+nav .right a:nth-child(1) {
+  color: #24292f;
+}
+
+nav .right a:nth-child(2) {
+  color: #0a66c2;
+}
+
+nav .right a:nth-child(3) {
+  color: #c43d2f;
+}
+
 nav .right a i {
   font-size: 18px;
 }
@@ -88,6 +100,18 @@ nav .right a span {
 nav .right a:hover {
   background-color: rgba(0, 0, 0, 0.08);
   transform: scale(1.05);
+}
+
+nav .right a:nth-child(1):hover {
+  background-color: rgba(36, 41, 47, 0.12);
+}
+
+nav .right a:nth-child(2):hover {
+  background-color: rgba(10, 102, 194, 0.12);
+}
+
+nav .right a:nth-child(3):hover {
+  background-color: rgba(196, 61, 47, 0.12);
 }
 
 nav .right a:active {
