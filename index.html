@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpeg" href="images/headshot.jpg" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
@@ -76,12 +77,6 @@
 
           <div class="hero-actions">
             <a href="#projects" class="btn">View my projects</a>
-            <a
-              href="files/Resume_John Angelo.pdf"
-              download
-              class="btn secondary"
-              >Download resume</a
-            >
           </div>
 
           <div class="links">
@@ -108,20 +103,6 @@
           across different fields helps me approach problems with patience,
           curiosity, and a focus on the people using the product.
         </p>
-
-        <div class="about-buttons">
-          <a
-            href="files/Japanese Resume_John Angelo.pdf"
-            download
-            class="btn secondary"
-          >
-            <i class="fa-solid fa-download"></i> Resume (JP)
-          </a>
-
-          <a href="files/N1.jpg" download class="btn outline">
-            <i class="fa-solid fa-certificate"></i> JLPT
-          </a>
-        </div>
       </section>
 
       <section id="skills" class="section">
@@ -174,6 +155,51 @@
               models.
             </p>
             <p class="project-stack">React · JavaScript · Express · MongoDB</p>
+            <aside class="demo-account" aria-label="Paynear demo accounts">
+              <h4>Demo accounts</h4>
+              <dl>
+                <div>
+                  <dt>Account 1</dt>
+                  <dd>
+                    <span>demo.paynear@test.com</span>
+                    <button
+                      type="button"
+                      class="copy-email"
+                      data-email="demo.paynear@test.com"
+                      aria-label="Copy Paynear demo account 1 email"
+                      title="Copy email"
+                    >
+                      <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                    </button>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Password</dt>
+                  <dd>Demo123!</dd>
+                </div>
+              </dl>
+              <dl>
+                <div>
+                  <dt>Account 2</dt>
+                  <dd>
+                    <span>demo.paynear2@test.com</span>
+                    <button
+                      type="button"
+                      class="copy-email"
+                      data-email="demo.paynear2@test.com"
+                      aria-label="Copy Paynear demo account 2 email"
+                      title="Copy email"
+                    >
+                      <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                    </button>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Password</dt>
+                  <dd>Demo123!</dd>
+                </div>
+              </dl>
+            </aside>
             <div class="project-links">
               <a
                 href="https://github.com/leeyoonhun02-dev/Paynear.git"
@@ -230,6 +256,30 @@
               manage their personal finances through a responsive interface.
             </p>
             <p class="project-stack">React · JavaScript · Node.js · MongoDB</p>
+            <aside class="demo-account" aria-label="Budget Buddy demo account">
+              <h4>Demo account</h4>
+              <dl>
+                <div>
+                  <dt>Email</dt>
+                  <dd>
+                    <span>demo.budgetbuddy@test.com</span>
+                    <button
+                      type="button"
+                      class="copy-email"
+                      data-email="demo.budgetbuddy@test.com"
+                      aria-label="Copy Budget Buddy demo email"
+                      title="Copy email"
+                    >
+                      <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                    </button>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Password</dt>
+                  <dd>Demo123!</dd>
+                </div>
+              </dl>
+            </aside>
             <div class="project-links">
               <a
                 href="https://github.com/leeyoonhun02-dev/Budget-Buddy"
@@ -276,14 +326,56 @@
           I’m open to junior developer roles, internships, and conversations
           with teams building useful products.
         </p>
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=leeyoonhun02@gmail.com&su=Portfolio%20opportunity"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn contact-button"
+
+        <form
+          class="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
         >
-          <i class="fa-solid fa-envelope"></i> Email me
-        </a>
+          <input
+            type="hidden"
+            name="access_key"
+            value="06147d25-6ccd-4cb7-98f3-1d825b105221"
+          />
+          <input type="hidden" name="subject" value="New portfolio message" />
+          <input
+            type="hidden"
+            name="from_name"
+            value="Portfolio contact form"
+          />
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="message_subject" required />
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="btn contact-button">
+            <i class="fa-solid fa-paper-plane"></i> Send message
+          </button>
+        </form>
       </section>
     </main>
 
@@ -314,6 +406,40 @@
             section.classList.remove("is-highlighted");
             link.classList.remove("is-active");
           }, 1800);
+        });
+      });
+
+      document.querySelectorAll(".copy-email").forEach((button) => {
+        button.addEventListener("click", async () => {
+          const email = button.dataset.email;
+
+          try {
+            await navigator.clipboard.writeText(email);
+          } catch {
+            const emailInput = document.createElement("textarea");
+            emailInput.value = email;
+            emailInput.setAttribute("readonly", "");
+            emailInput.style.position = "fixed";
+            emailInput.style.opacity = "0";
+            document.body.appendChild(emailInput);
+            emailInput.select();
+            document.execCommand("copy");
+            emailInput.remove();
+          }
+
+          button.classList.add("is-copied");
+          button.setAttribute("aria-label", "Email copied");
+          button.title = "Copied";
+          button.innerHTML =
+            '<i class="fa-solid fa-check" aria-hidden="true"></i>';
+
+          setTimeout(() => {
+            button.classList.remove("is-copied");
+            button.setAttribute("aria-label", "Copy demo email");
+            button.title = "Copy email";
+            button.innerHTML =
+              '<i class="fa-regular fa-copy" aria-hidden="true"></i>';
+          }, 1600);
         });
       });
 

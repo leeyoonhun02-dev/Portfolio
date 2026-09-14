@@ -450,6 +450,75 @@ main > .section:nth-of-type(even) {
   font-weight: 600;
 }
 
+.demo-account {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--accent);
+  background: #fff8e8;
+}
+
+.demo-account h4 {
+  margin-bottom: 6px;
+  color: var(--text-color);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.demo-account dl {
+  display: grid;
+  gap: 3px;
+  font-size: 0.82rem;
+}
+
+.demo-account dl div {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.demo-account dt {
+  color: var(--muted-text);
+  font-weight: 600;
+}
+
+.demo-account dd {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-color);
+  overflow-wrap: anywhere;
+}
+
+.demo-account dd span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.copy-email {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--primary-dark);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.copy-email:hover,
+.copy-email.is-copied {
+  background: var(--primary);
+  color: var(--surface);
+}
+
 .project-card a {
   margin-top: 10px;
   display: inline-block;
@@ -460,13 +529,85 @@ main > .section:nth-of-type(even) {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 500px;
+  gap: 16px;
+  max-width: 560px;
   margin: auto;
+  margin-top: 28px;
+  text-align: left;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.form-field textarea {
+  min-height: 140px;
 }
 
 .contact-button {
-  margin-top: 24px;
+  align-self: flex-start;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 380px) {
+  nav {
+    padding: 0 12px;
+  }
+
+  nav .right {
+    gap: 6px;
+  }
+
+  nav .right a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-section,
+  .section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    padding: 16px;
+  }
+
+  .demo-account dl div {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 6px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 899px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 900px) {
