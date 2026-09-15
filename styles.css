@@ -215,6 +215,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   margin-top: 24px;
 }
@@ -240,6 +241,11 @@ nav {
   text-decoration-color: var(--accent);
   text-decoration-thickness: 3px;
   text-underline-offset: 5px;
+}
+
+.hero-section .links {
+  width: 100%;
+  text-align: center;
 }
 
 .section {
@@ -395,10 +401,6 @@ main > .section:nth-of-type(even) {
   color: #fc6d26;
 }
 
-.skill-card .fa-mobile-screen-button {
-  color: #0d6e9f;
-}
-
 .skill-card .fa-node-js {
   color: #4f9b3e;
 }
@@ -409,6 +411,9 @@ main > .section:nth-of-type(even) {
 
 .skill-card .fa-database {
   color: #47a248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-grid {
@@ -640,6 +645,14 @@ main > .section:nth-of-type(even) {
 
   .hero-section img {
     width: min(300px, 26vw);
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .hero-section .links {
+    text-align: left;
   }
 
   .skills-grid {
